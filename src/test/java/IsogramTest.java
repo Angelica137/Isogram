@@ -9,7 +9,7 @@ public class IsogramTest {
 
 	@Test
 	public void testStringIsIsogram() {
-		assertEquals("Nothing to see here", new Isogram().isIsogram(s1));
+		assertEquals("This is not an isogram", new Isogram().isIsogram("hello"));
 	}
 
 }
