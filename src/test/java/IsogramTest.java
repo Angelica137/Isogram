@@ -8,26 +8,31 @@ import org.junit.Before;
 
 public class IsogramTest {
 
-	private String s1;
+	private Isogram iso;
+
+	@Before
+	public void setup() {
+		iso = new Isogram();
+	}
 
 	@Test
 	public void testStringIsNotIsogram() {
-		assertEquals("This is not an isogram", new Isogram().isIsogram("hello"));
+		assertEquals("False", iso.isIsogram("hello"));
 	}
 
 	@Test
 	public void testStringIsIsogram() {
-		assertEquals("This is an isogram", new Isogram().isIsogram("no"));
+		assertEquals("True", iso.isIsogram("no"));
 	}
 
 	@Test
 	public void testLongStringIsIsogram() {
-		assertEquals("This is an isogram", new Isogram().isIsogram("abcdefghijklmno"));
+		assertEquals("True", iso.isIsogram("abcdefghijklmno"));
 	}
 
 	@Test
 	public void testEmptyStringThrowsException() {
-		IllegalArgumentException expected = assertThrows(IllegalArgumentException.class, () -> new Isogram().isIsogram(""));
+		IllegalArgumentException expected = assertThrows(IllegalArgumentException.class, () -> iso.isIsogram(""));
 		assertThat(expected).hasMessage("Empty string not allowed");
 	}
 
