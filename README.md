@@ -1,6 +1,6 @@
 # Isogram
 
-### Introduction
+## Introduction
 
 Determine if a word or phrase is an isogram.
 
