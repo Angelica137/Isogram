@@ -1,6 +1,6 @@
 public class Isogram {
-	public String sayHello() {
-		return "hello, world";
+	public String isIsogram(String s1) {
+		return "Nothing to see here";
 	}
 
 }
