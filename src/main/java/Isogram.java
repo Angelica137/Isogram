@@ -1,6 +1,10 @@
 public class Isogram {
 	public String isIsogram(String s1) {
 
+		if (s1.equals("")) {
+			throw new IllegalArgumentException("Empty string not allowed");
+		}
+
 		char[] s1chars = s1.toCharArray();
 
 		for (int i = 0; i < s1.length(); i++) {
