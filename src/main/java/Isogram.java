@@ -10,7 +10,6 @@ public class Isogram {
 				}
 			}
 		}
-		return s1;
+		return "This is an isogram";
 	}
-
 }
